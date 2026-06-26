@@ -1,0 +1,260 @@
+:root {
+  color-scheme: light;
+  --page: #fbfbf8;
+  --ink: #171719;
+  --muted: #63636d;
+  --line: #deded7;
+  --accent: #b22d35;
+  --accent-dark: #7b1f28;
+  --blue: #154f8e;
+  --surface: #ffffff;
+  --max-width: 1060px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(178, 45, 53, 0.08), transparent 28rem),
+    linear-gradient(180deg, #ffffff 0%, var(--page) 46rem);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+main,
+footer {
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 76px 0 38px;
+  text-align: center;
+}
+
+.venue {
+  margin: 0 0 14px;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  max-width: 980px;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.15rem, 4.8vw, 3.85rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  max-width: 900px;
+  margin: 32px auto 0;
+  color: #222229;
+  font-size: clamp(1.04rem, 2vw, 1.34rem);
+  line-height: 1.4;
+}
+
+.authors span {
+  white-space: nowrap;
+}
+
+.affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 24px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 20px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(20, 20, 24, 0.08);
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.button-disabled {
+  color: #6f6f77;
+  cursor: default;
+}
+
+.teaser,
+.summary,
+.abstract {
+  padding: 34px 0;
+}
+
+.teaser h2,
+.summary h2,
+.abstract h2 {
+  text-align: center;
+}
+
+figure {
+  margin: 0;
+}
+
+.teaser img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 18px 48px rgba(20, 20, 24, 0.12);
+}
+
+figcaption {
+  max-width: 850px;
+  margin: 18px auto 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.summary {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.summary p {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #202027;
+  font-size: clamp(1.12rem, 2.4vw, 1.38rem);
+  font-weight: 650;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.abstract {
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+.abstract p {
+  margin: 0 0 18px;
+  color: #2d2d33;
+  font-size: 1.04rem;
+}
+
+.abstract p:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+  padding: 30px 0 46px;
+  color: var(--muted);
+  text-align: center;
+}
+
+footer p {
+  margin: 0 0 28px;
+  font-size: 0.98rem;
+}
+
+footer a {
+  color: inherit;
+  text-decoration-color: rgba(99, 99, 109, 0.55);
+  text-underline-offset: 3px;
+}
+
+footer img {
+  display: block;
+  width: min(100%, 920px);
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  main,
+  footer {
+    width: min(calc(100% - 22px), var(--max-width));
+  }
+
+  .hero {
+    padding: 48px 0 24px;
+  }
+
+  h1 {
+    font-size: clamp(1.82rem, 8.4vw, 2.32rem);
+    line-height: 1.14;
+  }
+
+  .authors span {
+    white-space: normal;
+  }
+
+  .button {
+    width: min(100%, 230px);
+  }
+
+  .teaser,
+  .summary,
+  .abstract {
+    padding: 26px 0;
+  }
+
+  .teaser img {
+    border-radius: 6px;
+  }
+
+  figcaption,
+  .abstract p {
+    font-size: 0.98rem;
+  }
+}
