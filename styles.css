@@ -58,10 +58,10 @@ p {
 }
 
 h1 {
-  max-width: min(1500px, 96vw);
+  max-width: min(1720px, calc(100vw - 24px));
   margin: 0 auto;
   font-family: var(--font-main);
-  font-size: clamp(2.15rem, 4.8vw, 3.85rem);
+  font-size: clamp(2.15rem, 4.1vw, 3.35rem);
   line-height: 1.1;
   letter-spacing: 0;
   overflow-wrap: normal;
