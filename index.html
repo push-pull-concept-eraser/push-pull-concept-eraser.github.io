@@ -246,22 +246,22 @@
           and copyright violations. Concept erasure methods aim to address these risks by removing
           undesirable concepts from pretrained models without full retraining. However, existing
           approaches often degrade non-target generation quality through heuristic strength scaling
-          such as classifier-free guidance or negative prompt scaling, leading to uncontrolled and
+          (e.g., classifier-free guidance or negative prompt scaling), leading to uncontrolled and
           excessive semantic drift.
         </p>
         <p>
-          To address this, we propose Push&ndash;Pull Attentional Anchoring, a mechanism in the
+          To address this, we propose Push&ndash;Pull Attentional Anchoring (PPAA), a mechanism in the
           cross-attention space that displaces target representations while anchoring the scale of
-          erasure via bounded cosine-similarity constraints. Our margin operates on the relative
-          cosine ratio to the original model rather than an absolute difference, yielding an
-          adaptive and concept-aware distance threshold calibrated by each layer's original
-          target-anchor similarity.
+          erasure via bounded cosine-similarity constraints. By using a relative similarity ratio
+          instead of an absolute difference, our adaptive threshold represents a meaningful
+          percentage of semantic retention, facilitating a single value to be applied uniformly
+          across layers.
         </p>
         <p>
           We conduct extensive experiments across multiple concept categories, including
           celebrities, artistic styles, nudity, and intellectual property. Our method achieves
-          favourable trade-offs against prior approaches on Stable Diffusion v1.4, with additional
-          results demonstrating broader applicability to FLUX.
+          favorable trade-offs against prior approaches on Stable Diffusion v1.4 and demonstrates
+          its applicability to modern architectures such as FLUX.
         </p>
       </section>
     </main>
