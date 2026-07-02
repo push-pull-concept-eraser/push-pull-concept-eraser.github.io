@@ -202,6 +202,22 @@ figure {
   gap: 34px;
 }
 
+.figure-stack > .teaser-figure[aria-labelledby="figure-strength-title"] {
+  order: 1;
+}
+
+.figure-stack > .teaser-summary {
+  order: 2;
+}
+
+.figure-stack > .teaser-figure[aria-labelledby="figure-stable-title"] {
+  order: 3;
+}
+
+.figure-stack > .teaser-figure[aria-labelledby="figure-flux-title"] {
+  order: 4;
+}
+
 .teaser-figure {
   overflow: hidden;
   padding: 24px 0 22px;
@@ -209,27 +225,22 @@ figure {
 
 .figure-title {
   width: min(100%, 1680px);
-  margin: 0 auto 20px;
-  border-radius: 8px;
-  padding: 13px 20px 14px;
+  margin: 0 auto 16px;
+  padding: 0 20px;
   color: #141418;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
   line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
 }
 
-.stable-title {
-  background: #d8ebfa;
-}
-
-.strength-title {
-  background: #ffe8dc;
-}
-
 .flux-title {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 13px 20px 14px;
   background: #e3d7fb;
+  font-size: clamp(2rem, 3.2vw, 3rem);
 }
 
 .figure-scroll {
@@ -717,8 +728,13 @@ footer img {
 
   .figure-title {
     margin-bottom: 16px;
+    padding: 0 14px;
+    font-size: 1.35rem;
+  }
+
+  .flux-title {
     padding: 10px 14px 11px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .figure-table {
