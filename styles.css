@@ -243,14 +243,6 @@ figure {
   text-align: center;
 }
 
-.flux-title {
-  margin-bottom: 20px;
-  border-radius: 8px;
-  padding: 13px 20px 14px;
-  background: #e3d7fb;
-  font-size: clamp(2rem, 3.2vw, 3rem);
-}
-
 .figure-scroll {
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -738,11 +730,6 @@ footer img {
     margin-bottom: 16px;
     padding: 0 14px;
     font-size: 1.35rem;
-  }
-
-  .flux-title {
-    padding: 10px 14px 11px;
-    font-size: 1.8rem;
   }
 
   .figure-table {
