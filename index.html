@@ -36,17 +36,200 @@
 
       <section class="teaser" aria-labelledby="teaser-title">
         <h2 id="teaser-title">Teaser</h2>
-        <figure>
-          <img
-            src="assets/teaser.png"
-            alt="Qualitative comparison of concept erasure methods on Stable Diffusion 1.4 and FLUX."
-          >
-          <figcaption>
-            Push&ndash;Pull Attentional Anchoring erases target concepts while preserving nearby
-            non-target concepts, with controllable erasure strength and support for modern
-            diffusion architectures.
-          </figcaption>
-        </figure>
+
+        <div class="figure-stack">
+          <figure class="teaser-figure" aria-labelledby="figure-stable-title">
+            <h3 id="figure-stable-title" class="figure-title stable-title">Stable Diffusion 1.4</h3>
+            <div class="figure-scroll" role="group" aria-label="Stable Diffusion 1.4 qualitative comparison">
+              <table class="figure-table stable-table">
+                <thead>
+                  <tr>
+                    <th class="pair-spacer" aria-hidden="true"></th>
+                    <th class="row-spacer" aria-hidden="true"></th>
+                    <th class="method-label" scope="col">Original</th>
+                    <th class="method-label" scope="col">ESD</th>
+                    <th class="method-label" scope="col">UCE</th>
+                    <th class="method-label" scope="col">MACE</th>
+                    <th class="method-label" scope="col">AC</th>
+                    <th class="method-label" scope="col">SUMA</th>
+                    <th class="method-label" scope="col">DUO</th>
+                    <th class="method-label" scope="col">Ours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="pair-label" rowspan="2" scope="rowgroup">
+                      <span class="brace" aria-hidden="true"></span>
+                      <span class="pair-text"><span>Erase</span><span class="concept-erased">Obama</span></span>
+                    </th>
+                    <th class="vertical-label concept-erased" scope="row"><span>Obama</span></th>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c01-original.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama Original result"><img src="assets/figures/stable-diffusion/r01-obama_c01-original.png" alt="Stable Diffusion 1.4 Obama Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c02-esd.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama ESD result"><img src="assets/figures/stable-diffusion/r01-obama_c02-esd.png" alt="Stable Diffusion 1.4 Obama ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c03-uce.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama UCE result"><img src="assets/figures/stable-diffusion/r01-obama_c03-uce.png" alt="Stable Diffusion 1.4 Obama UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c04-mace.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama MACE result"><img src="assets/figures/stable-diffusion/r01-obama_c04-mace.png" alt="Stable Diffusion 1.4 Obama MACE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c05-ac.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama AC result"><img src="assets/figures/stable-diffusion/r01-obama_c05-ac.png" alt="Stable Diffusion 1.4 Obama AC result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c06-suma.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama SUMA result"><img src="assets/figures/stable-diffusion/r01-obama_c06-suma.png" alt="Stable Diffusion 1.4 Obama SUMA result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c07-duo.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama DUO result"><img src="assets/figures/stable-diffusion/r01-obama_c07-duo.png" alt="Stable Diffusion 1.4 Obama DUO result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r01-obama_c08-ours.png" download data-lightbox data-caption="Stable Diffusion 1.4 Obama Ours result"><img src="assets/figures/stable-diffusion/r01-obama_c08-ours.png" alt="Stable Diffusion 1.4 Obama Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr>
+                    <th class="vertical-label concept-preserved" scope="row"><span>Will Smith</span></th>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c01-original.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith Original result"><img src="assets/figures/stable-diffusion/r02-will-smith_c01-original.png" alt="Stable Diffusion 1.4 Will Smith Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c02-esd.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith ESD result"><img src="assets/figures/stable-diffusion/r02-will-smith_c02-esd.png" alt="Stable Diffusion 1.4 Will Smith ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c03-uce.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith UCE result"><img src="assets/figures/stable-diffusion/r02-will-smith_c03-uce.png" alt="Stable Diffusion 1.4 Will Smith UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c04-mace.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith MACE result"><img src="assets/figures/stable-diffusion/r02-will-smith_c04-mace.png" alt="Stable Diffusion 1.4 Will Smith MACE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c05-ac.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith AC result"><img src="assets/figures/stable-diffusion/r02-will-smith_c05-ac.png" alt="Stable Diffusion 1.4 Will Smith AC result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c06-suma.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith SUMA result"><img src="assets/figures/stable-diffusion/r02-will-smith_c06-suma.png" alt="Stable Diffusion 1.4 Will Smith SUMA result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c07-duo.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith DUO result"><img src="assets/figures/stable-diffusion/r02-will-smith_c07-duo.png" alt="Stable Diffusion 1.4 Will Smith DUO result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r02-will-smith_c08-ours.png" download data-lightbox data-caption="Stable Diffusion 1.4 Will Smith Ours result"><img src="assets/figures/stable-diffusion/r02-will-smith_c08-ours.png" alt="Stable Diffusion 1.4 Will Smith Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr class="group-start">
+                    <th class="pair-label" rowspan="2" scope="rowgroup">
+                      <span class="brace" aria-hidden="true"></span>
+                      <span class="pair-text"><span>Erase</span><span class="concept-erased">Van Gogh</span></span>
+                    </th>
+                    <th class="vertical-label concept-erased" scope="row"><span>Van Gogh</span></th>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c01-original.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh Original result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c01-original.png" alt="Stable Diffusion 1.4 Van Gogh Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c02-esd.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh ESD result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c02-esd.png" alt="Stable Diffusion 1.4 Van Gogh ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c03-uce.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh UCE result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c03-uce.png" alt="Stable Diffusion 1.4 Van Gogh UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c04-mace.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh MACE result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c04-mace.png" alt="Stable Diffusion 1.4 Van Gogh MACE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c05-ac.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh AC result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c05-ac.png" alt="Stable Diffusion 1.4 Van Gogh AC result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c06-suma.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh SUMA result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c06-suma.png" alt="Stable Diffusion 1.4 Van Gogh SUMA result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c07-duo.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh DUO result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c07-duo.png" alt="Stable Diffusion 1.4 Van Gogh DUO result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r03-van-gogh_c08-ours.png" download data-lightbox data-caption="Stable Diffusion 1.4 Van Gogh Ours result"><img src="assets/figures/stable-diffusion/r03-van-gogh_c08-ours.png" alt="Stable Diffusion 1.4 Van Gogh Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr>
+                    <th class="vertical-label concept-preserved" scope="row"><span>Picasso</span></th>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c01-original.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso Original result"><img src="assets/figures/stable-diffusion/r04-picasso_c01-original.png" alt="Stable Diffusion 1.4 Picasso Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c02-esd.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso ESD result"><img src="assets/figures/stable-diffusion/r04-picasso_c02-esd.png" alt="Stable Diffusion 1.4 Picasso ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c03-uce.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso UCE result"><img src="assets/figures/stable-diffusion/r04-picasso_c03-uce.png" alt="Stable Diffusion 1.4 Picasso UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c04-mace.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso MACE result"><img src="assets/figures/stable-diffusion/r04-picasso_c04-mace.png" alt="Stable Diffusion 1.4 Picasso MACE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c05-ac.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso AC result"><img src="assets/figures/stable-diffusion/r04-picasso_c05-ac.png" alt="Stable Diffusion 1.4 Picasso AC result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c06-suma.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso SUMA result"><img src="assets/figures/stable-diffusion/r04-picasso_c06-suma.png" alt="Stable Diffusion 1.4 Picasso SUMA result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c07-duo.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso DUO result"><img src="assets/figures/stable-diffusion/r04-picasso_c07-duo.png" alt="Stable Diffusion 1.4 Picasso DUO result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/stable-diffusion/r04-picasso_c08-ours.png" download data-lightbox data-caption="Stable Diffusion 1.4 Picasso Ours result"><img src="assets/figures/stable-diffusion/r04-picasso_c08-ours.png" alt="Stable Diffusion 1.4 Picasso Ours result" loading="lazy"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>
+              Qualitative comparison on Stable Diffusion 1.4. Red labels mark erased concepts;
+              blue labels mark nearby concepts preserved by the edited model.
+            </figcaption>
+          </figure>
+
+          <figure class="teaser-figure" aria-labelledby="figure-strength-title">
+            <h3 id="figure-strength-title" class="figure-title strength-title">Controllable Erasure Strength</h3>
+            <div class="figure-scroll" role="group" aria-label="Controllable erasure strength comparison">
+              <table class="figure-table strength-table">
+                <thead>
+                  <tr>
+                    <th class="pair-spacer" aria-hidden="true"></th>
+                    <th class="row-spacer" aria-hidden="true"></th>
+                    <th class="strength-axis" colspan="8" scope="colgroup">
+                      <span>Controllable Erasure Strength (Ours)</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="erase-label" scope="row"><span>Erase</span></th>
+                    <th class="vertical-label concept-erased" scope="row"><span>Goku</span></th>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c01-strength-01.jpeg" download data-lightbox data-caption="Controllable strength Goku level 1 result"><img src="assets/figures/strength/r01-goku_c01-strength-01.jpeg" alt="Controllable strength Goku level 1 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c02-strength-02.jpeg" download data-lightbox data-caption="Controllable strength Goku level 2 result"><img src="assets/figures/strength/r01-goku_c02-strength-02.jpeg" alt="Controllable strength Goku level 2 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c03-strength-03.jpeg" download data-lightbox data-caption="Controllable strength Goku level 3 result"><img src="assets/figures/strength/r01-goku_c03-strength-03.jpeg" alt="Controllable strength Goku level 3 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c04-strength-04.jpeg" download data-lightbox data-caption="Controllable strength Goku level 4 result"><img src="assets/figures/strength/r01-goku_c04-strength-04.jpeg" alt="Controllable strength Goku level 4 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c05-strength-05.jpeg" download data-lightbox data-caption="Controllable strength Goku level 5 result"><img src="assets/figures/strength/r01-goku_c05-strength-05.jpeg" alt="Controllable strength Goku level 5 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c06-strength-06.jpeg" download data-lightbox data-caption="Controllable strength Goku level 6 result"><img src="assets/figures/strength/r01-goku_c06-strength-06.jpeg" alt="Controllable strength Goku level 6 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c07-strength-07.png" download data-lightbox data-caption="Controllable strength Goku level 7 result"><img src="assets/figures/strength/r01-goku_c07-strength-07.png" alt="Controllable strength Goku level 7 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r01-goku_c08-strength-08.png" download data-lightbox data-caption="Controllable strength Goku level 8 result"><img src="assets/figures/strength/r01-goku_c08-strength-08.png" alt="Controllable strength Goku level 8 result" loading="lazy"></a></td>
+                  </tr>
+                  <tr>
+                    <th class="erase-label" scope="row"><span>Erase</span></th>
+                    <th class="vertical-label concept-erased" scope="row"><span>GP. Cat</span></th>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c01-strength-01.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 1 result"><img src="assets/figures/strength/r02-grumpy-cat_c01-strength-01.jpeg" alt="Controllable strength GP. Cat level 1 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c02-strength-02.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 2 result"><img src="assets/figures/strength/r02-grumpy-cat_c02-strength-02.jpeg" alt="Controllable strength GP. Cat level 2 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c03-strength-03.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 3 result"><img src="assets/figures/strength/r02-grumpy-cat_c03-strength-03.jpeg" alt="Controllable strength GP. Cat level 3 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c04-strength-04.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 4 result"><img src="assets/figures/strength/r02-grumpy-cat_c04-strength-04.jpeg" alt="Controllable strength GP. Cat level 4 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c05-strength-05.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 5 result"><img src="assets/figures/strength/r02-grumpy-cat_c05-strength-05.jpeg" alt="Controllable strength GP. Cat level 5 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c06-strength-06.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 6 result"><img src="assets/figures/strength/r02-grumpy-cat_c06-strength-06.jpeg" alt="Controllable strength GP. Cat level 6 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c07-strength-07.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 7 result"><img src="assets/figures/strength/r02-grumpy-cat_c07-strength-07.jpeg" alt="Controllable strength GP. Cat level 7 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c08-strength-08.png" download data-lightbox data-caption="Controllable strength GP. Cat level 8 result"><img src="assets/figures/strength/r02-grumpy-cat_c08-strength-08.png" alt="Controllable strength GP. Cat level 8 result" loading="lazy"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>
+              Push&ndash;Pull supports a smooth erasure-strength sweep while retaining prompt structure
+              across adjacent intervention levels.
+            </figcaption>
+          </figure>
+
+          <figure class="teaser-figure" aria-labelledby="figure-flux-title">
+            <h3 id="figure-flux-title" class="figure-title flux-title">FLUX</h3>
+            <div class="figure-scroll" role="group" aria-label="FLUX qualitative comparison">
+              <table class="figure-table flux-table">
+                <thead>
+                  <tr>
+                    <th class="row-spacer" aria-hidden="true"></th>
+                    <th class="method-label" scope="col">Original</th>
+                    <th class="method-label" scope="col">ESD</th>
+                    <th class="method-label" scope="col">UCE</th>
+                    <th class="method-label" scope="col">Ours</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="vertical-label concept-erased" scope="row"><span>Obama</span></th>
+                    <td><a class="tile-link" href="assets/figures/flux/r01-obama_c01-original.png" download data-lightbox data-caption="FLUX Obama Original result"><img src="assets/figures/flux/r01-obama_c01-original.png" alt="FLUX Obama Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r01-obama_c02-esd.png" download data-lightbox data-caption="FLUX Obama ESD result"><img src="assets/figures/flux/r01-obama_c02-esd.png" alt="FLUX Obama ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r01-obama_c03-uce.png" download data-lightbox data-caption="FLUX Obama UCE result"><img src="assets/figures/flux/r01-obama_c03-uce.png" alt="FLUX Obama UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r01-obama_c04-ours.png" download data-lightbox data-caption="FLUX Obama Ours result"><img src="assets/figures/flux/r01-obama_c04-ours.png" alt="FLUX Obama Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr>
+                    <th class="vertical-label concept-preserved" scope="row"><span>Will Smith</span></th>
+                    <td><a class="tile-link" href="assets/figures/flux/r02-will-smith_c01-original.png" download data-lightbox data-caption="FLUX Will Smith Original result"><img src="assets/figures/flux/r02-will-smith_c01-original.png" alt="FLUX Will Smith Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r02-will-smith_c02-esd.png" download data-lightbox data-caption="FLUX Will Smith ESD result"><img src="assets/figures/flux/r02-will-smith_c02-esd.png" alt="FLUX Will Smith ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r02-will-smith_c03-uce.png" download data-lightbox data-caption="FLUX Will Smith UCE result"><img src="assets/figures/flux/r02-will-smith_c03-uce.png" alt="FLUX Will Smith UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r02-will-smith_c04-ours.png" download data-lightbox data-caption="FLUX Will Smith Ours result"><img src="assets/figures/flux/r02-will-smith_c04-ours.png" alt="FLUX Will Smith Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr class="group-start">
+                    <th class="vertical-label concept-erased" scope="row"><span>Van Gogh</span></th>
+                    <td><a class="tile-link" href="assets/figures/flux/r03-van-gogh_c01-original.png" download data-lightbox data-caption="FLUX Van Gogh Original result"><img src="assets/figures/flux/r03-van-gogh_c01-original.png" alt="FLUX Van Gogh Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r03-van-gogh_c02-esd.png" download data-lightbox data-caption="FLUX Van Gogh ESD result"><img src="assets/figures/flux/r03-van-gogh_c02-esd.png" alt="FLUX Van Gogh ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r03-van-gogh_c03-uce.png" download data-lightbox data-caption="FLUX Van Gogh UCE result"><img src="assets/figures/flux/r03-van-gogh_c03-uce.png" alt="FLUX Van Gogh UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r03-van-gogh_c04-ours.png" download data-lightbox data-caption="FLUX Van Gogh Ours result"><img src="assets/figures/flux/r03-van-gogh_c04-ours.png" alt="FLUX Van Gogh Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr>
+                    <th class="vertical-label concept-preserved" scope="row"><span>Picasso</span></th>
+                    <td><a class="tile-link" href="assets/figures/flux/r04-picasso_c01-original.png" download data-lightbox data-caption="FLUX Picasso Original result"><img src="assets/figures/flux/r04-picasso_c01-original.png" alt="FLUX Picasso Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r04-picasso_c02-esd.png" download data-lightbox data-caption="FLUX Picasso ESD result"><img src="assets/figures/flux/r04-picasso_c02-esd.png" alt="FLUX Picasso ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r04-picasso_c03-uce.png" download data-lightbox data-caption="FLUX Picasso UCE result"><img src="assets/figures/flux/r04-picasso_c03-uce.png" alt="FLUX Picasso UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r04-picasso_c04-ours.png" download data-lightbox data-caption="FLUX Picasso Ours result"><img src="assets/figures/flux/r04-picasso_c04-ours.png" alt="FLUX Picasso Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr class="group-start">
+                    <th class="vertical-label concept-erased" scope="row"><span>M. Mouse</span></th>
+                    <td><a class="tile-link" href="assets/figures/flux/r05-mickey-mouse_c01-original.png" download data-lightbox data-caption="FLUX M. Mouse Original result"><img src="assets/figures/flux/r05-mickey-mouse_c01-original.png" alt="FLUX M. Mouse Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r05-mickey-mouse_c02-esd.png" download data-lightbox data-caption="FLUX M. Mouse ESD result"><img src="assets/figures/flux/r05-mickey-mouse_c02-esd.png" alt="FLUX M. Mouse ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r05-mickey-mouse_c03-uce.png" download data-lightbox data-caption="FLUX M. Mouse UCE result"><img src="assets/figures/flux/r05-mickey-mouse_c03-uce.png" alt="FLUX M. Mouse UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r05-mickey-mouse_c04-ours.png" download data-lightbox data-caption="FLUX M. Mouse Ours result"><img src="assets/figures/flux/r05-mickey-mouse_c04-ours.png" alt="FLUX M. Mouse Ours result" loading="lazy"></a></td>
+                  </tr>
+                  <tr>
+                    <th class="vertical-label concept-preserved" scope="row"><span>D. Duck</span></th>
+                    <td><a class="tile-link" href="assets/figures/flux/r06-donald-duck_c01-original.png" download data-lightbox data-caption="FLUX D. Duck Original result"><img src="assets/figures/flux/r06-donald-duck_c01-original.png" alt="FLUX D. Duck Original result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r06-donald-duck_c02-esd.png" download data-lightbox data-caption="FLUX D. Duck ESD result"><img src="assets/figures/flux/r06-donald-duck_c02-esd.png" alt="FLUX D. Duck ESD result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r06-donald-duck_c03-uce.png" download data-lightbox data-caption="FLUX D. Duck UCE result"><img src="assets/figures/flux/r06-donald-duck_c03-uce.png" alt="FLUX D. Duck UCE result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/flux/r06-donald-duck_c04-ours.png" download data-lightbox data-caption="FLUX D. Duck Ours result"><img src="assets/figures/flux/r06-donald-duck_c04-ours.png" alt="FLUX D. Duck Ours result" loading="lazy"></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figcaption>
+              FLUX results preserve the same erased/preserved split across celebrity, artistic
+              style, and character concepts.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="summary" aria-labelledby="tldr-title">
@@ -97,5 +280,6 @@
         alt="Vision and Learning Laboratory and VISTEC logos."
       >
     </footer>
+    <script src="figure-viewer.js" defer></script>
   </body>
 </html>
