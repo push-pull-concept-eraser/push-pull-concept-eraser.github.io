@@ -156,11 +156,7 @@ figure {
 
 .teaser-figure {
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 24px 18px 22px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 18px 48px rgba(20, 20, 24, 0.1);
+  padding: 24px 0 22px;
 }
 
 .figure-title {
@@ -400,20 +396,16 @@ figure {
   width: var(--tile);
   height: var(--tile);
   overflow: hidden;
-  border-radius: 2px;
-  background: #f1f1f1;
+  background: transparent;
   color: inherit;
   outline-offset: 3px;
-  transition:
-    box-shadow 160ms ease,
-    transform 160ms ease;
+  transition: opacity 160ms ease;
 }
 
 .tile-link:hover,
 .tile-link:focus-visible {
   z-index: 1;
-  box-shadow: 0 8px 18px rgba(20, 20, 24, 0.18);
-  transform: translateY(-1px);
+  opacity: 0.88;
 }
 
 .tile-link img {
@@ -628,8 +620,7 @@ footer img {
   }
 
   .teaser-figure {
-    padding: 18px 10px 20px;
-    border-radius: 6px;
+    padding: 18px 0 20px;
   }
 
   .figure-title {
