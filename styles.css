@@ -10,7 +10,7 @@
   --figure-red: #ff1f1f;
   --figure-blue: #0070c0;
   --surface: #ffffff;
-  --max-width: 1060px;
+  --max-width: 1760px;
 }
 
 * {
@@ -160,7 +160,7 @@ figure {
 }
 
 .figure-title {
-  width: min(100%, 780px);
+  width: min(100%, 1680px);
   margin: 0 auto 20px;
   border-radius: 8px;
   padding: 13px 20px 14px;
@@ -196,10 +196,10 @@ figure {
 }
 
 .figure-table {
-  --tile: 92px;
-  --tile-gap: 4px;
-  --pair-label-width: 42px;
-  --row-label-width: 52px;
+  --tile: clamp(92px, 9.2vw, 194px);
+  --tile-gap: clamp(4px, 0.3vw, 6px);
+  --pair-label-width: clamp(42px, 3.4vw, 62px);
+  --row-label-width: clamp(52px, 4.1vw, 74px);
   border-collapse: separate;
   border-spacing: var(--tile-gap);
   margin: 0 auto;
@@ -210,7 +210,7 @@ figure {
 }
 
 .flux-table {
-  --tile: 96px;
+  --tile: clamp(96px, 9.2vw, 194px);
 }
 
 .figure-table th,
