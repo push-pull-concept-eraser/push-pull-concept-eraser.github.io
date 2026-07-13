@@ -254,6 +254,10 @@ figure {
   outline-offset: 4px;
 }
 
+.strength-pair-block {
+  margin-top: 24px;
+}
+
 .figure-table {
   --tile: clamp(92px, 9.2vw, 194px);
   --tile-gap: clamp(4px, 0.3vw, 6px);
