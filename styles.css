@@ -448,22 +448,8 @@ figure {
   background: #ffffff;
 }
 
-.figure-table tfoot td {
-  height: auto;
-  padding-top: 6px;
-}
-
-.figure-table tfoot td:first-of-type {
-  padding-right: calc(var(--tile-gap) * 2);
-}
-
-.strength-end-label {
-  color: #33333a;
-  font-family: var(--font-main);
-  font-size: 1.06rem;
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
+.strength-pair-gap td {
+  height: 24px;
 }
 
 .figure-table tbody tr.group-start > * {
@@ -757,8 +743,8 @@ footer img {
     font-size: 1rem;
   }
 
-  .strength-end-label {
-    font-size: 0.86rem;
+  .strength-pair-gap td {
+    height: 18px;
   }
 
   .strength-axis {
