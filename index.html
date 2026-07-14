@@ -10,7 +10,7 @@
     <title>Push-Pull Attentional Anchoring for Diffusion Concept Erasure</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
-    <link rel="stylesheet" href="styles.css?v=clean-filled-axis-arrows">
+    <link rel="stylesheet" href="styles.css?v=baseline-tabs">
   </head>
   <body>
     <main>
@@ -60,8 +60,35 @@
 
       <section class="teaser" aria-label="Qualitative results">
         <div class="figure-stack">
-          <figure class="teaser-figure" aria-labelledby="figure-stable-title">
-            <h3 id="figure-stable-title" class="figure-title stable-title">Stable Diffusion 1.4</h3>
+          <section class="baseline-comparison" aria-labelledby="baseline-comparison-title">
+            <h3 id="baseline-comparison-title" class="baseline-title">Baseline Comparison</h3>
+            <div class="baseline-tabs" role="tablist" aria-label="Model selection">
+              <button
+                class="baseline-tab"
+                id="baseline-tab-sd"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="baseline-panel-sd"
+                data-baseline-target="sd"
+              >
+                Stable Diffusion 1.4
+              </button>
+              <button
+                class="baseline-tab"
+                id="baseline-tab-flux"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="baseline-panel-flux"
+                data-baseline-target="flux"
+                tabindex="-1"
+              >
+                FLUX
+              </button>
+            </div>
+            <div class="baseline-panels">
+          <figure class="teaser-figure baseline-panel" id="baseline-panel-sd" role="tabpanel" aria-labelledby="baseline-tab-sd" data-baseline-panel="sd">
             <div class="figure-scroll" role="group" aria-label="Stable Diffusion 1.4 qualitative comparison">
               <table class="figure-table stable-table">
                 <thead>
@@ -135,6 +162,8 @@
               </table>
             </div>
           </figure>
+            </div>
+          </section>
 
           <figure class="teaser-figure" aria-label="Controllable Erasure Strength">
             <div class="figure-scroll" role="group" aria-label="Controllable erasure strength comparison">
@@ -477,8 +506,7 @@
             </div>
           </figure>
 
-          <figure class="teaser-figure" aria-labelledby="figure-flux-title">
-            <h3 id="figure-flux-title" class="figure-title flux-title">FLUX</h3>
+          <figure class="teaser-figure baseline-panel" id="baseline-panel-flux" role="tabpanel" aria-labelledby="baseline-tab-flux" data-baseline-panel="flux">
             <div class="figure-scroll" role="group" aria-label="FLUX qualitative comparison">
               <table class="figure-table flux-table">
                 <thead>

@@ -1,4 +1,49 @@
 (() => {
+  const panelContainer = document.querySelector(".baseline-panels");
+  const tabs = Array.from(document.querySelectorAll("[data-baseline-target]"));
+  const panels = Array.from(document.querySelectorAll("[data-baseline-panel]"));
+
+  if (panelContainer && tabs.length === 2 && panels.length === 2) {
+    const fluxPanel = document.querySelector('[data-baseline-panel="flux"]');
+    if (fluxPanel) {
+      panelContainer.appendChild(fluxPanel);
+    }
+
+    const activateTab = (target, moveFocus = false) => {
+      tabs.forEach((tab) => {
+        const active = tab.dataset.baselineTarget === target;
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+        if (active && moveFocus) {
+          tab.focus();
+        }
+      });
+
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.baselinePanel !== target;
+      });
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activateTab(tab.dataset.baselineTarget));
+      tab.addEventListener("keydown", (event) => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
+          return;
+        }
+
+        event.preventDefault();
+        const nextIndex = event.key === 'Home'
+          ? 0
+          : event.key === 'End'
+            ? tabs.length - 1
+            : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        activateTab(tabs[nextIndex].dataset.baselineTarget, true);
+      });
+    });
+
+    activateTab("sd");
+  }
+
   const links = Array.from(document.querySelectorAll("[data-lightbox]"));
 
   if (links.length === 0) {
