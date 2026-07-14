@@ -243,6 +243,10 @@ figure {
   text-align: center;
 }
 
+.strength-title {
+  display: none;
+}
+
 .figure-scroll {
   overflow-x: auto;
   overscroll-behavior-x: contain;
