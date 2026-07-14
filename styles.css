@@ -137,6 +137,16 @@ h2 {
   margin-top: 22px;
 }
 
+@media (min-width: 721px) {
+  .hero-resources > .conference-badge {
+    transform: translateY(-7px);
+  }
+
+  .hero-resources > .resource-card {
+    transform: translateY(7px);
+  }
+}
+
 .conference-badge img {
   display: block;
   width: min(172px, 42vw);
