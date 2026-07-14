@@ -81,7 +81,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 18px;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 32px auto 0;
   color: #222229;
   font-size: clamp(1.04rem, 2vw, 1.34rem);
