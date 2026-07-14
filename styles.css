@@ -92,6 +92,15 @@ h2 {
   white-space: nowrap;
 }
 
+@media (min-width: 900px) {
+  .authors {
+    max-width: none;
+    flex-wrap: nowrap;
+    gap: 8px 14px;
+    font-size: 1rem;
+  }
+}
+
 .affiliations {
   display: flex;
   flex-wrap: wrap;
