@@ -60,14 +60,6 @@
 
       <section class="teaser" aria-label="Qualitative results">
         <div class="figure-stack">
-          <section class="summary teaser-summary" aria-label="Paper summary">
-            <p>
-              We introduce a bounded push&ndash;pull objective in diffusion cross-attention space that
-              erases a target concept while limiting collateral damage, improving erasure&ndash;preservation
-              trade-off with controllable erasure strength.
-            </p>
-          </section>
-
           <figure class="teaser-figure" aria-labelledby="figure-stable-title">
             <h3 id="figure-stable-title" class="figure-title stable-title">Stable Diffusion 1.4</h3>
             <div class="figure-scroll" role="group" aria-label="Stable Diffusion 1.4 qualitative comparison">
@@ -182,23 +174,30 @@
                   </tr>
                   <tr>
                     <th class="erase-label" scope="row"><span>Erase</span></th>
-                    <th class="vertical-label concept-erased" scope="row"><span>GP. Cat</span></th>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c01-strength-01.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 1 result"><img src="assets/figures/strength/r02-grumpy-cat_c01-strength-01.jpeg" alt="Controllable strength GP. Cat level 1 result" loading="lazy"></a></td>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c02-strength-02.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 2 result"><img src="assets/figures/strength/r02-grumpy-cat_c02-strength-02.jpeg" alt="Controllable strength GP. Cat level 2 result" loading="lazy"></a></td>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c03-strength-03.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 3 result"><img src="assets/figures/strength/r02-grumpy-cat_c03-strength-03.jpeg" alt="Controllable strength GP. Cat level 3 result" loading="lazy"></a></td>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c04-strength-04.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 4 result"><img src="assets/figures/strength/r02-grumpy-cat_c04-strength-04.jpeg" alt="Controllable strength GP. Cat level 4 result" loading="lazy"></a></td>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c05-strength-05.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 5 result"><img src="assets/figures/strength/r02-grumpy-cat_c05-strength-05.jpeg" alt="Controllable strength GP. Cat level 5 result" loading="lazy"></a></td>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c06-strength-06.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 6 result"><img src="assets/figures/strength/r02-grumpy-cat_c06-strength-06.jpeg" alt="Controllable strength GP. Cat level 6 result" loading="lazy"></a></td>
-                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c07-strength-07.jpeg" download data-lightbox data-caption="Controllable strength GP. Cat level 7 result"><img src="assets/figures/strength/r02-grumpy-cat_c07-strength-07.jpeg" alt="Controllable strength GP. Cat level 7 result" loading="lazy"></a></td>
+                    <th class="vertical-label concept-erased" scope="row"><span>Grumpy Cat</span></th>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c01-strength-01.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 1 result"><img src="assets/figures/strength/r02-grumpy-cat_c01-strength-01.jpeg" alt="Controllable strength Grumpy Cat level 1 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c02-strength-02.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 2 result"><img src="assets/figures/strength/r02-grumpy-cat_c02-strength-02.jpeg" alt="Controllable strength Grumpy Cat level 2 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c03-strength-03.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 3 result"><img src="assets/figures/strength/r02-grumpy-cat_c03-strength-03.jpeg" alt="Controllable strength Grumpy Cat level 3 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c04-strength-04.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 4 result"><img src="assets/figures/strength/r02-grumpy-cat_c04-strength-04.jpeg" alt="Controllable strength Grumpy Cat level 4 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c05-strength-05.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 5 result"><img src="assets/figures/strength/r02-grumpy-cat_c05-strength-05.jpeg" alt="Controllable strength Grumpy Cat level 5 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c06-strength-06.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 6 result"><img src="assets/figures/strength/r02-grumpy-cat_c06-strength-06.jpeg" alt="Controllable strength Grumpy Cat level 6 result" loading="lazy"></a></td>
+                    <td><a class="tile-link" href="assets/figures/strength/r02-grumpy-cat_c07-strength-07.jpeg" download data-lightbox data-caption="Controllable strength Grumpy Cat level 7 result"><img src="assets/figures/strength/r02-grumpy-cat_c07-strength-07.jpeg" alt="Controllable strength Grumpy Cat level 7 result" loading="lazy"></a></td>
                     <td>
-                      <a class="tile-link animated-sweep" href="assets/figures/strength/r02-grumpy-cat_animated.webp?v=original-slow" download data-lightbox data-caption="Controllable strength GP. Cat animated sweep from original to strongest erasure" aria-label="Controllable strength GP. Cat animated sweep from original to strongest erasure">
-                        <img src="assets/figures/strength/r02-grumpy-cat_animated.webp?v=original-slow" alt="Controllable strength GP. Cat animated sweep from original to strongest erasure" loading="eager" decoding="async">
+                      <a class="tile-link animated-sweep" href="assets/figures/strength/r02-grumpy-cat_animated.webp?v=original-slow" download data-lightbox data-caption="Controllable strength Grumpy Cat animated sweep from original to strongest erasure" aria-label="Controllable strength Grumpy Cat animated sweep from original to strongest erasure">
+                        <img src="assets/figures/strength/r02-grumpy-cat_animated.webp?v=original-slow" alt="Controllable strength Grumpy Cat animated sweep from original to strongest erasure" loading="eager" decoding="async">
                       </a>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <section class="summary teaser-summary" aria-label="Paper summary">
+              <p>
+                We introduce a bounded push&ndash;pull objective in diffusion cross-attention space that
+                erases a target concept while limiting collateral damage, improving erasure&ndash;preservation
+                trade-off with controllable erasure strength.
+              </p>
+            </section>
             <div class="figure-scroll strength-pair-block" role="group" aria-label="Obama, Will Smith, Margot Robbie, Amber Heard, Ryan Gosling, Chris Hemsworth, Rihanna, Nicki Minaj, Picasso, Van Gogh, Claude Monet, Grumpy Cat, Persian Cat, Goku, and Mickey Mouse erasure strength comparisons">
               <table class="figure-table strength-table strength-pair-table">
                 <thead>
