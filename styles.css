@@ -291,6 +291,10 @@ figure {
 }
 
 @media (min-width: 721px) {
+  .figure-scroll {
+    overflow-x: visible;
+  }
+
   .figure-table {
     transform: translateX(var(--grid-center-offset));
   }
