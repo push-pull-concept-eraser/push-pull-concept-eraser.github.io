@@ -12,6 +12,10 @@
   --surface: #ffffff;
   --max-width: 1760px;
   --font-main: "Abadi", "Abadi MT", "Abadi MT Condensed Light", "Aptos", "Segoe UI", sans-serif;
+  --type-section-title: clamp(1.45rem, 2.1vw, 2rem);
+  --type-column-label: 1.34rem;
+  --type-concept-label: 1.18rem;
+  --type-resource-label: 1rem;
 }
 
 * {
@@ -153,7 +157,7 @@ h2 {
   justify-items: center;
   gap: 8px;
   color: #2d70d6;
-  font-size: 1rem;
+  font-size: var(--type-resource-label);
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
@@ -254,7 +258,7 @@ figure {
   padding: 0 20px;
   color: #141418;
   font-family: var(--font-main);
-  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  font-size: var(--type-section-title);
   line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
@@ -328,7 +332,7 @@ figure {
 .method-label {
   height: 30px;
   padding-bottom: 5px;
-  font-size: 1.34rem;
+  font-size: var(--type-column-label);
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
@@ -348,7 +352,7 @@ figure {
 .vertical-label {
   position: relative;
   height: var(--tile);
-  font-size: 1.18rem;
+  font-size: var(--type-concept-label);
   font-weight: 500;
 }
 
@@ -375,7 +379,7 @@ figure {
   width: var(--pair-label-width);
   min-width: var(--pair-label-width);
   height: calc(var(--tile) * 2 + var(--tile-gap));
-  font-size: 1.16rem;
+  font-size: var(--type-concept-label);
   font-weight: 500;
 }
 
@@ -421,7 +425,7 @@ figure {
   width: var(--pair-label-width);
   min-width: var(--pair-label-width);
   height: var(--tile);
-  font-size: 1.18rem;
+  font-size: var(--type-concept-label);
   font-weight: 500;
 }
 
@@ -429,7 +433,7 @@ figure {
   position: relative;
   height: 34px;
   padding-bottom: 8px;
-  font-size: 1.02rem;
+  font-size: var(--type-column-label);
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
@@ -633,7 +637,7 @@ figcaption {
   margin: 40px 0 34px;
   color: #141418;
   font-family: var(--font-main);
-  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  font-size: var(--type-section-title);
   line-height: 1.1;
   text-align: center;
 }
@@ -704,6 +708,10 @@ footer img {
   }
 
   .method-label {
+    font-size: 1.22rem;
+  }
+
+  .strength-axis {
     font-size: 1.22rem;
   }
 
@@ -782,6 +790,10 @@ footer img {
   .figure-title {
     margin-bottom: 16px;
     padding: 0 14px;
+    font-size: 1.35rem;
+  }
+
+  .more-results-title {
     font-size: 1.35rem;
   }
 
