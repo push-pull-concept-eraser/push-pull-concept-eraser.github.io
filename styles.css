@@ -210,7 +210,7 @@ figure {
   gap: 34px;
 }
 
-.figure-stack > .teaser-figure[aria-labelledby="figure-strength-title"] {
+.figure-stack > .teaser-figure[aria-label="Controllable Erasure Strength"] {
   order: 1;
 }
 
@@ -241,10 +241,6 @@ figure {
   line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
-}
-
-.strength-title {
-  display: none;
 }
 
 .figure-scroll {
