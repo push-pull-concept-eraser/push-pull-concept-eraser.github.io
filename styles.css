@@ -455,21 +455,24 @@ figure {
 .axis-arrow::after {
   content: "";
   position: absolute;
-  top: -6px;
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  background: transparent;
 }
 
 .axis-arrow::before {
   left: 0;
-  border-right: 10px solid #111111;
+  border-bottom: 2px solid #111111;
+  border-left: 2px solid #111111;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .axis-arrow::after {
   right: 0;
-  border-left: 10px solid #111111;
+  border-right: 2px solid #111111;
+  border-bottom: 2px solid #111111;
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .axis-label {
