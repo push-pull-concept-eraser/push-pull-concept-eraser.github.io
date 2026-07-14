@@ -601,6 +601,15 @@ figcaption {
   padding: 24px 0;
 }
 
+.more-results-title {
+  margin: 4px 0 18px;
+  color: #141418;
+  font-family: var(--font-main);
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
 .summary p {
   max-width: 1120px;
   margin: 0 auto;
