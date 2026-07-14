@@ -576,8 +576,11 @@ figcaption {
 }
 
 .summary {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border: 0;
+}
+
+.teaser-summary {
+  padding: 24px 0;
 }
 
 .summary p {
