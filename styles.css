@@ -580,6 +580,7 @@ figcaption {
 }
 
 .teaser-summary {
+  border: none !important;
   padding: 24px 0;
 }
 
