@@ -602,7 +602,7 @@ figcaption {
 }
 
 .more-results-title {
-  margin: 4px 0 18px;
+  margin: 40px 0 34px;
   color: #141418;
   font-family: var(--font-main);
   font-size: clamp(1.45rem, 2.1vw, 2rem);
