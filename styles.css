@@ -116,13 +116,21 @@ h2 {
   display: grid;
   justify-items: center;
   gap: 4px;
-  margin: 22px auto 0;
+  margin: 0;
   color: var(--accent-dark);
   font-size: 0.98rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+.hero-resources {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(28px, 6vw, 80px);
+  margin-top: 22px;
 }
 
 .conference-badge img {
@@ -690,6 +698,11 @@ footer img {
 
   .conference-badge img {
     width: min(148px, 46vw);
+  }
+
+  .hero-resources {
+    flex-wrap: wrap;
+    gap: 18px 24px;
   }
 
   .resource-links {
