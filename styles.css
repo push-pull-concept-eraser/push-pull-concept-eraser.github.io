@@ -232,7 +232,7 @@ figure {
 }
 
 .figure-stack > .teaser-summary {
-  order: 0;
+  order: 2;
 }
 
 .figure-stack > .teaser-figure[aria-labelledby="figure-stable-title"] {
