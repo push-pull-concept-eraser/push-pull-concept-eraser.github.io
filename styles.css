@@ -215,7 +215,7 @@ figure {
 }
 
 .figure-stack > .teaser-summary {
-  order: 2;
+  order: 0;
 }
 
 .figure-stack > .teaser-figure[aria-labelledby="figure-stable-title"] {
