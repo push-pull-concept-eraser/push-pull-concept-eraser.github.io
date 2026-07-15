@@ -44,6 +44,27 @@
     activateTab("sd");
   }
 
+  const citationCopyButton = document.querySelector("[data-copy-citation]");
+  const citationCode = document.querySelector("#citation-bibtex code");
+  const citationCopyStatus = document.querySelector("#citation-copy-status");
+
+  if (citationCopyButton && citationCode) {
+    citationCopyButton.addEventListener("click", async () => {
+      const citation = citationCode.textContent.trim();
+
+      try {
+        await navigator.clipboard.writeText(citation);
+        if (citationCopyStatus) {
+          citationCopyStatus.textContent = "BibTeX copied to clipboard.";
+        }
+      } catch {
+        if (citationCopyStatus) {
+          citationCopyStatus.textContent = "Unable to copy BibTeX. Please select and copy it manually.";
+        }
+      }
+    });
+  }
+
   const links = Array.from(document.querySelectorAll("[data-lightbox]"));
 
   if (links.length === 0) {
