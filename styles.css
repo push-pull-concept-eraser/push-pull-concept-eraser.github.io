@@ -747,7 +747,7 @@ footer a {
 }
 
 .citation-card {
-  width: min(100%, 1680px);
+  width: min(100%, 1400px);
   margin: 0 auto 30px;
   overflow: hidden;
   border: 1px solid #e2e5e9;
