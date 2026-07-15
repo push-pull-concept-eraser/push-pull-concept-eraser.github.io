@@ -65,7 +65,7 @@ h1 {
   max-width: min(1720px, calc(100vw - 24px));
   margin: 0 auto;
   font-family: var(--font-main);
-  font-size: clamp(2.15rem, 4.1vw, 3.35rem);
+  font-size: clamp(2rem, 3.7vw, 3.05rem);
   line-height: 1.1;
   letter-spacing: 0;
   overflow-wrap: normal;
@@ -101,7 +101,7 @@ h2 {
     max-width: none;
     flex-wrap: nowrap;
     gap: 8px 14px;
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -112,7 +112,7 @@ h2 {
   gap: 6px 24px;
   margin: 18px auto 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.4;
 }
 
