@@ -10,7 +10,7 @@
   --figure-red: #ff1f1f;
   --figure-blue: #0070c0;
   --surface: #ffffff;
-  --max-width: 1760px;
+  --max-width: 1500px;
   --font-main: "Abadi", "Abadi MT", "Abadi MT Condensed Light", "Aptos", "Segoe UI", sans-serif;
   --type-section-title: clamp(1.45rem, 2.1vw, 2rem);
   --type-column-label: 1.34rem;
@@ -62,7 +62,7 @@ p {
 }
 
 h1 {
-  max-width: min(1720px, calc(100vw - 24px));
+  max-width: min(1500px, calc(100vw - 24px));
   margin: 0 auto;
   font-family: var(--font-main);
   font-size: clamp(2rem, 3.7vw, 3.05rem);
@@ -85,7 +85,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 18px;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 32px auto 0;
   color: #222229;
   font-size: clamp(1.04rem, 2vw, 1.34rem);
@@ -259,7 +259,7 @@ figure {
 }
 
 .baseline-title {
-  width: min(100%, 1680px);
+  width: min(100%, 1500px);
   margin: 0 auto 14px;
   padding: 0 20px;
   color: #141418;
@@ -313,7 +313,7 @@ figure {
 }
 
 .figure-title {
-  width: min(100%, 1680px);
+  width: min(100%, 1500px);
   margin: 0 auto 16px;
   padding: 0 20px;
   color: #141418;
