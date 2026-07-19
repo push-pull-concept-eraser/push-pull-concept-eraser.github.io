@@ -242,7 +242,7 @@ figure {
 }
 
 .figure-stack > .teaser-figure[aria-label="Controllable Erasure Strength"] {
-  order: 1;
+  order: 2;
 }
 
 .figure-stack > .teaser-summary {
@@ -250,7 +250,7 @@ figure {
 }
 
 .baseline-comparison {
-  order: 3;
+  order: 1;
   padding: 24px 0 22px;
 }
 
