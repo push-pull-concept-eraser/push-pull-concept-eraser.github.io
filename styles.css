@@ -241,6 +241,10 @@ figure {
   gap: 34px;
 }
 
+.figure-stack > * {
+  min-width: 0;
+}
+
 .figure-stack > .teaser-figure[aria-label="Controllable Erasure Strength"] {
   order: 2;
 }
@@ -344,7 +348,7 @@ figure {
   --tile-gap: clamp(4px, 0.3vw, 6px);
   --pair-label-width: clamp(42px, 3.4vw, 62px);
   --row-label-width: clamp(52px, 4.1vw, 74px);
-  --grid-center-offset: calc((var(--pair-label-width) + var(--row-label-width) + (var(--tile-gap) * 2)) / -2);
+  --grid-label-width: calc(var(--pair-label-width) + var(--row-label-width) + (var(--tile-gap) * 2));
   border-collapse: separate;
   border-spacing: var(--tile-gap);
   margin: 0 auto;
@@ -356,16 +360,19 @@ figure {
 
 @media (min-width: 721px) {
   .figure-scroll {
+    display: grid;
+    justify-content: center;
     overflow-x: visible;
   }
 
   .figure-table {
-    transform: translateX(var(--grid-center-offset));
+    margin-inline: auto;
   }
 }
 
 .flux-table {
   --tile: clamp(96px, 9.2vw, 194px);
+  --grid-label-width: calc(var(--row-label-width) + var(--tile-gap));
 }
 
 .figure-table th,
