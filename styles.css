@@ -370,6 +370,29 @@ figure {
   }
 }
 
+@media (min-width: 981px) {
+  .baseline-panel .figure-table,
+  .figure-stack > .teaser-figure[aria-label="Controllable Erasure Strength"] .figure-table {
+    transform: translateX(calc(var(--grid-label-width) / -2));
+  }
+
+  .baseline-panel,
+  .figure-stack > .teaser-figure[aria-label="Controllable Erasure Strength"] {
+    overflow: visible;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+  .figure-scroll {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .figure-table {
+    margin-inline: 0 auto;
+  }
+}
+
 .flux-table {
   --tile: clamp(96px, 9.2vw, 194px);
   --grid-label-width: calc(var(--row-label-width) + var(--tile-gap));
