@@ -382,6 +382,12 @@ figure {
   }
 }
 
+@media (min-width: 981px) and (max-width: 1399px) {
+  .baseline-panel .figure-table {
+    transform: none;
+  }
+}
+
 @media (min-width: 721px) and (max-width: 980px) {
   .figure-scroll {
     display: block;
@@ -446,6 +452,10 @@ figure {
   font-weight: 500;
 }
 
+.vertical-label-tall {
+  height: calc(var(--tile) * 3 + (var(--tile-gap) * 2));
+}
+
 .vertical-label span,
 .erase-label span {
   position: absolute;
@@ -471,6 +481,10 @@ figure {
   height: calc(var(--tile) * 2 + var(--tile-gap));
   font-size: var(--type-concept-label);
   font-weight: 500;
+}
+
+.pair-label-tall {
+  height: calc(var(--tile) * 6 + (var(--tile-gap) * 5));
 }
 
 .brace {
