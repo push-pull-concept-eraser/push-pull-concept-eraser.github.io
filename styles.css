@@ -311,6 +311,10 @@ figure {
   padding: 0;
 }
 
+.baseline-panel > .teaser-figure[aria-label="Controllable Erasure Strength"] {
+  padding: 24px 0 22px;
+}
+
 .teaser-figure {
   overflow: hidden;
   padding: 24px 0 22px;

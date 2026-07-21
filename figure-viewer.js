@@ -5,6 +5,13 @@
 
   if (panelContainer && tabs.length === 2 && panels.length === 2) {
     const fluxPanel = document.querySelector('[data-baseline-panel="flux"]');
+    const strengthFigure = document.querySelector('figure[aria-label="Controllable Erasure Strength"]');
+    const remainingSdComparison = document.querySelector('[aria-label="Stable Diffusion 1.4 remaining qualitative comparison"]');
+
+    if (strengthFigure && remainingSdComparison) {
+      remainingSdComparison.parentElement.insertBefore(strengthFigure, remainingSdComparison);
+    }
+
     if (fluxPanel) {
       panelContainer.appendChild(fluxPanel);
     }
