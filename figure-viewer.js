@@ -10,6 +10,37 @@
     const strengthMoreResultsTitle = strengthFigure?.querySelector(".more-results-title");
     const strengthMoreResults = strengthFigure?.querySelector(".strength-pair-block");
 
+    if (remainingSdComparison) {
+      const remainingBody = remainingSdComparison.querySelector("tbody");
+      const desiredBaselineOrder = ["Obama", "Margot Robbie", "Van Gogh", "Picasso", "Grumpy Cat"];
+
+      if (remainingBody) {
+        const pairGroups = [];
+        let currentGroup = null;
+
+        Array.from(remainingBody.children).forEach((row) => {
+          const pairLabel = row.querySelector(".pair-label .concept-erased");
+
+          if (pairLabel) {
+            currentGroup = { label: pairLabel.textContent.trim(), rows: [] };
+            pairGroups.push(currentGroup);
+          }
+
+          if (currentGroup) {
+            currentGroup.rows.push(row);
+          }
+        });
+
+        const groupsByLabel = new Map(pairGroups.map((group) => [group.label, group]));
+        if (desiredBaselineOrder.every((label) => groupsByLabel.has(label))) {
+          desiredBaselineOrder
+            .map((label) => groupsByLabel.get(label))
+            .flatMap((group) => group.rows)
+            .forEach((row) => remainingBody.appendChild(row));
+        }
+      }
+    }
+
     if (strengthFigure && remainingSdComparison) {
       remainingSdComparison.parentElement.insertBefore(strengthFigure, remainingSdComparison);
 
