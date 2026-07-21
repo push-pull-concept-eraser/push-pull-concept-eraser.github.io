@@ -456,6 +456,10 @@ figure {
   height: calc(var(--tile) * 3 + (var(--tile-gap) * 2));
 }
 
+.vertical-label-four {
+  height: calc(var(--tile) * 4 + (var(--tile-gap) * 3));
+}
+
 .vertical-label span,
 .erase-label span {
   position: absolute;
@@ -485,6 +489,10 @@ figure {
 
 .pair-label-tall {
   height: calc(var(--tile) * 6 + (var(--tile-gap) * 5));
+}
+
+.pair-label-eight {
+  height: calc(var(--tile) * 8 + (var(--tile-gap) * 7));
 }
 
 .brace {
