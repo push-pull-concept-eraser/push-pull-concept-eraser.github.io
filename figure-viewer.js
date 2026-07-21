@@ -7,9 +7,15 @@
     const fluxPanel = document.querySelector('[data-baseline-panel="flux"]');
     const strengthFigure = document.querySelector('figure[aria-label="Controllable Erasure Strength"]');
     const remainingSdComparison = document.querySelector('[aria-label="Stable Diffusion 1.4 remaining qualitative comparison"]');
+    const strengthMoreResultsTitle = strengthFigure?.querySelector(".more-results-title");
+    const strengthMoreResults = strengthFigure?.querySelector(".strength-pair-block");
 
     if (strengthFigure && remainingSdComparison) {
       remainingSdComparison.parentElement.insertBefore(strengthFigure, remainingSdComparison);
+
+      if (strengthMoreResultsTitle && strengthMoreResults) {
+        remainingSdComparison.after(strengthMoreResultsTitle, strengthMoreResults);
+      }
     }
 
     if (fluxPanel) {
