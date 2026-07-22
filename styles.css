@@ -401,15 +401,6 @@ figure {
   opacity: 0.38;
 }
 
-.comparison-sample-status {
-  min-width: 88px;
-  color: #4c5663;
-  font-size: 0.92rem;
-  font-weight: 600;
-  line-height: 1;
-  text-align: center;
-}
-
 .comparison-sample-dots {
   display: flex;
   gap: 7px;
@@ -1200,11 +1191,6 @@ footer img {
     width: 30px;
     height: 30px;
     font-size: 1.5rem;
-  }
-
-  .comparison-sample-status {
-    min-width: 82px;
-    font-size: 0.86rem;
   }
 
   .strength-axis {

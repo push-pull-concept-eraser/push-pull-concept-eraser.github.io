@@ -136,7 +136,7 @@
           previousButton.innerHTML = '<span aria-hidden="true">&#8249;</span>';
 
           const status = document.createElement("output");
-          status.className = "comparison-sample-status";
+          status.className = "sr-only comparison-sample-status";
           status.setAttribute("aria-live", "polite");
           status.setAttribute("aria-atomic", "true");
 
