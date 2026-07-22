@@ -45,7 +45,8 @@
       remainingSdComparison.parentElement.insertBefore(strengthFigure, remainingSdComparison);
 
       if (strengthMoreResultsTitle && strengthMoreResults) {
-        remainingSdComparison.after(strengthMoreResultsTitle, strengthMoreResults);
+        strengthFigure.after(strengthMoreResultsTitle);
+        remainingSdComparison.after(strengthMoreResults);
       }
     }
 
