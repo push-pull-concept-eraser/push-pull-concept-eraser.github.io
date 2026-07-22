@@ -162,14 +162,12 @@
 
           let activeSample = 0;
           const setActiveSample = (nextSample) => {
-            const nextIndex = Math.max(0, Math.min(sampleCount - 1, nextSample));
+            const nextIndex = (nextSample + sampleCount) % sampleCount;
             const changed = nextIndex !== activeSample;
             activeSample = nextIndex;
             sampleBodies.forEach((sampleBody, sampleIndex) => {
               sampleBody.hidden = sampleIndex !== activeSample;
             });
-            previousButton.disabled = activeSample === 0;
-            nextButton.disabled = activeSample === sampleCount - 1;
             status.value = `Sample ${activeSample + 1} of ${sampleCount}`;
             status.textContent = status.value;
             dotButtons.forEach((dot, sampleIndex) => {

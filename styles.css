@@ -396,11 +396,6 @@ figure {
   color: #1b5fbf;
 }
 
-.comparison-sample-button:disabled {
-  cursor: default;
-  opacity: 0.38;
-}
-
 .comparison-sample-dots {
   display: flex;
   gap: 7px;
