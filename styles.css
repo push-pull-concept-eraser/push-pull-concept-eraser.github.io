@@ -88,7 +88,7 @@ h2 {
   max-width: 1500px;
   margin: 32px auto 0;
   color: #222229;
-  font-size: clamp(1.04rem, 2vw, 1.34rem);
+  font-size: clamp(1.1rem, 2vw, 1.2rem);
   line-height: 1.4;
 }
 
@@ -101,7 +101,7 @@ h2 {
     max-width: none;
     flex-wrap: nowrap;
     gap: 8px 14px;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -112,7 +112,7 @@ h2 {
   gap: 6px 24px;
   margin: 18px auto 0;
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.18rem);
   line-height: 1.4;
 }
 
@@ -122,7 +122,7 @@ h2 {
   gap: 4px;
   margin: 0;
   color: var(--accent-dark);
-  font-size: 0.98rem;
+  font-size: 1.08rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   line-height: 1.1;
@@ -135,6 +135,10 @@ h2 {
   justify-content: center;
   gap: clamp(28px, 6vw, 80px);
   margin-top: 22px;
+}
+
+.hero-resources .resource-card {
+  font-size: 1.12rem;
 }
 
 @media (min-width: 721px) {
@@ -348,10 +352,10 @@ figure {
 }
 
 .figure-table {
-  --tile: clamp(92px, 9.2vw, 194px);
+  --tile: clamp(92px, 9.2vw, 180px);
   --tile-gap: clamp(4px, 0.3vw, 6px);
   --pair-label-width: clamp(42px, 3.4vw, 62px);
-  --row-label-width: clamp(52px, 4.1vw, 74px);
+  --row-label-width: clamp(28px, 2vw, 30px);
   --grid-label-width: calc(var(--pair-label-width) + var(--row-label-width) + (var(--tile-gap) * 2));
   border-collapse: separate;
   border-spacing: var(--tile-gap);
@@ -384,6 +388,10 @@ figure {
   .figure-stack > .teaser-figure[aria-label="Controllable Erasure Strength"] {
     overflow: visible;
   }
+
+  .baseline-panel > .teaser-figure[aria-label="Controllable Erasure Strength"] {
+    overflow: visible;
+  }
 }
 
 @media (min-width: 981px) and (max-width: 1399px) {
@@ -404,7 +412,7 @@ figure {
 }
 
 .flux-table {
-  --tile: clamp(96px, 9.2vw, 194px);
+  --tile: clamp(96px, 9.2vw, 180px);
   --grid-label-width: calc(var(--row-label-width) + var(--tile-gap));
 }
 
@@ -958,6 +966,10 @@ footer img {
     font-size: 0.92rem;
   }
 
+  .hero-resources .resource-card {
+    font-size: 1rem;
+  }
+
   .citation-card {
     margin-bottom: 24px;
     border-radius: 12px;
@@ -1037,7 +1049,7 @@ footer img {
   .figure-table {
     --tile: 72px;
     --pair-label-width: 36px;
-    --row-label-width: 44px;
+    --row-label-width: 28px;
     --tile-gap: 3px;
   }
 
