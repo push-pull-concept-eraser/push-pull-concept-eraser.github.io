@@ -99,6 +99,17 @@
           const table = document.createElement("table");
           table.className = "figure-table stable-table";
           const groupHeader = comparisonHeader.cloneNode(true);
+          const methodHeaderRow = groupHeader.querySelector("thead tr:last-child");
+          const firstSampleCellCount = group.rows[0].querySelectorAll(":scope > td").length;
+          const methodHeaders = methodHeaderRow ? Array.from(methodHeaderRow.querySelectorAll(".method-label")) : [];
+          if (methodHeaderRow && firstSampleCellCount === 9 && methodHeaders.length === 8) {
+            const oursHeader = methodHeaders.find((header) => header.textContent.trim() === "Ours");
+            if (oursHeader) {
+              const stereoHeader = oursHeader.cloneNode(true);
+              stereoHeader.textContent = "STEREO";
+              oursHeader.before(stereoHeader);
+            }
+          }
           table.appendChild(groupHeader);
 
           const sampleBodies = Array.from({ length: sampleCount }, (_, sampleIndex) => {
