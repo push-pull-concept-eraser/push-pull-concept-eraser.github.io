@@ -85,7 +85,6 @@
           const erasedConcept = pairLabel.querySelector(".concept-erased")?.textContent.trim() ?? "Erased concept";
           const preservedConcept = preserveLabel.textContent.trim();
           const pairName = `${erasedConcept} and ${preservedConcept}`;
-          const isVanGoghPicasso = erasedConcept === "Van Gogh" && preservedConcept === "Picasso";
           const sampler = document.createElement("section");
           sampler.className = "comparison-sampler";
           sampler.setAttribute("aria-label", `${pairName} comparison samples`);
@@ -98,18 +97,6 @@
           const table = document.createElement("table");
           table.className = "figure-table stable-table";
           const groupHeader = comparisonHeader.cloneNode(true);
-          if (isVanGoghPicasso) {
-            const headerRow = groupHeader.querySelector("tr");
-            const oursHeader = Array.from(groupHeader.querySelectorAll(".method-label"))
-              .find((header) => header.textContent.trim() === "Ours");
-            if (headerRow && oursHeader) {
-              const stereoHeader = document.createElement("th");
-              stereoHeader.className = "method-label";
-              stereoHeader.scope = "col";
-              stereoHeader.textContent = "STEREO";
-              headerRow.insertBefore(stereoHeader, oursHeader);
-            }
-          }
           table.appendChild(groupHeader);
 
           const sampleBodies = Array.from({ length: sampleCount }, (_, sampleIndex) => {
