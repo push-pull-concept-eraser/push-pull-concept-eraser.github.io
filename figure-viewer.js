@@ -99,19 +99,6 @@
           const table = document.createElement("table");
           table.className = "figure-table stable-table";
           const groupHeader = comparisonHeader.cloneNode(true);
-          const hasStereo = erasedConcept === "Picasso" && preservedConcept === "Claude Monet";
-          if (hasStereo) {
-            const headerRow = groupHeader.querySelector("tr");
-            const oursHeader = Array.from(groupHeader.querySelectorAll(".method-label"))
-              .find((header) => header.textContent.trim() === "Ours");
-            if (headerRow && oursHeader) {
-              const stereoHeader = document.createElement("th");
-              stereoHeader.className = "method-label";
-              stereoHeader.scope = "col";
-              stereoHeader.textContent = "STEREO";
-              headerRow.insertBefore(stereoHeader, oursHeader);
-            }
-          }
           table.appendChild(groupHeader);
 
           const sampleBodies = Array.from({ length: sampleCount }, (_, sampleIndex) => {
