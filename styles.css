@@ -739,9 +739,9 @@ figcaption {
   padding: 0 0 8px;
   color: var(--muted);
   font-size: var(--type-concept-label);
+  font-weight: 500;
   line-height: 1.55;
   text-align: center;
-  transform: translateX(calc((clamp(42px, 3.4vw, 62px) + clamp(28px, 2vw, 30px) + (2 * clamp(4px, 0.3vw, 6px))) / 2));
 }
 
 .lightbox-open {
@@ -1030,7 +1030,6 @@ footer img {
   .teaser-caption {
     width: calc((8 * 86px) + (9 * 4px));
     font-size: 1.08rem;
-    transform: translateX(39px);
   }
 }
 
