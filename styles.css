@@ -129,6 +129,19 @@ h2 {
   text-transform: uppercase;
 }
 
+.conference-spotlight {
+  display: inline-flex;
+  margin-top: 3px;
+  border: 1px solid #e5b94f;
+  border-radius: 999px;
+  padding: 5px 12px;
+  background: #fff0c2;
+  color: #735000;
+  font-size: 0.74rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .hero-resources {
   display: flex;
   align-items: center;
